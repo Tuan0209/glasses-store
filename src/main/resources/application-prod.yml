@@ -1,0 +1,16 @@
+ACTIVE_PROFILE: prod
+
+EMAIL_HOST: smtp.gmail.com
+EMAIL_ID: buituan2002.tt@gmail.com
+EMAIL_PASSWORD: jmzg detw xssv ybf
+EMAIL_PORT: 587
+
+MYSQL_SQL_DB: eye_store
+MYSQL_SQL_HOST: localhost
+MYSQL_SQL_PASSWORD: Tuan0209.
+MYSQL_SQL_PORT: 3306
+MYSQL_SQL_USERNAME: root
+
+SERVER_PORT: 8080
+
+ALLOWED_ORIGINS:

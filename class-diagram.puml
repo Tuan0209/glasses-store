@@ -1,0 +1,28 @@
+@startuml eyecouture-store-diagram
+actor User
+
+usecase "Đăng nhập" as Login
+usecase "Quên mật khẩu" as ForgotPassword
+usecase "Đăng ký tài khoản" as Register
+
+User --> Login
+User --> ForgotPassword
+User --> Register
+
+note right of Login
+  - Người dùng nhập tên đăng nhập và mật khẩu
+  - Hệ thống xác thực thông tin
+  - Hệ thống trả về thông báo thành công hoặc lỗi
+end note
+
+note right of ForgotPassword
+  - Người dùng yêu cầu khôi phục mật khẩu
+  - Hệ thống gửi email khôi phục
+end note
+
+note right of Register
+  - Người dùng nhập thông tin đăng ký
+  - Hệ thống tạo tài khoản mới
+end note
+
+@enduml
