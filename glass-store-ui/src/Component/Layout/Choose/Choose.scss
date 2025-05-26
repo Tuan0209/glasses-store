@@ -1,0 +1,49 @@
+.paragraph-container {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  padding-left: 50px;
+  line-height: 2;
+  background-color: white;
+}
+.entry-title{
+  font-family: "Fira Sans", sans-serif;
+  color: #ffffff;
+  width: 100%;
+
+  margin-top: 0;
+  margin-bottom: .5em;
+  text-rendering: optimizeSpeed;
+
+}
+#h{
+  color: #000000;
+
+}
+//li::marker {
+//  content: "•";
+//  margin-right: 100px;
+//
+//}
+.bold-dot {
+  font-weight: bold;
+  margin-right: 10px;
+}
+/* custom-list-styles.css */
+.custom-marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+.bold-heading {
+  font-weight: bold;
+}
+
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+

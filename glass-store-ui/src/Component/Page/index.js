@@ -1,0 +1,13 @@
+export { default as Home } from './Home/Home.jsx';
+export { default as Login } from './Login';
+export { default as SignUp } from './SignUp';
+export { default as DetailsProduct } from './DetailsProduct/DetailsProduct.jsx';
+export { default as CartPage } from './Cart';
+export { default as Profile } from './Profile';
+export { default as CheckoutDetails } from './CheckoutDetails/CheckoutDetails.jsx';
+export { default as Address } from './Address/Address.js';
+export { default as OrderComfirm } from '~/Component/Page/OrderConfirm/OrderConfirm.jsx';
+export { default as MyOrder } from './MyOrder/MyOrder.jsx';
+export { default as Discover } from './Discover/Discover.jsx';
+export { default as Searching } from './Searching/Searching.jsx';
+export { default as Choose } from '../Layout/Choose/Choose.js'

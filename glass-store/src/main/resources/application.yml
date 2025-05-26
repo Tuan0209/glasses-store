@@ -1,0 +1,135 @@
+#app:
+#    jwt:
+#        secretKey: B1PtOxdWYsCuZ7fon6wMuUWwsGtLouYyUl4LVScBNiKSKWIHt+fSWKq9sxEPc8ts+8ey1o/qdy5oMs1qYgq0hQ==
+#    allowed:
+#        origins: ${ALLOWED_ORIGINS}
+#server:
+#    port: ${SERVER_PORT}
+#spring:
+#    profiles:
+#        active: ${ACTIVE_PROFILE}
+#    datasource:
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        password: ${MYSQL_SQL_PASSWORD}
+#        url: jdbc:mysql://${MYSQL_SQL_HOST}:${MYSQL_SQL_PORT}/${MYSQL_SQL_DB}
+#        username: ${MYSQL_SQL_USERNAME}
+#    jpa:
+#        generate-ddl: false
+#        show-sql: true
+#
+#    mail:
+#        default-encoding: UTF-8
+#        host: ${EMAIL_HOST}
+#        password: ${EMAIL_PASSWORD}
+#        username: ${EMAIL_ID}
+#        port: ${EMAIL_PORT}
+#        properties:
+#            mail:
+#                mime:
+#                    charset: UTF
+#                smtp:
+#                    writetimeout: 10000
+#                    connectiontimeout: 10000
+#                    timeout: 10000
+#                    auth: true
+#                    starttls:
+#                        enable: true
+#                        required: true
+#
+#springdoc:
+#    swagger-ui:
+#        filter: true
+#
+#logging:
+#    level:
+#        org:
+#            springframework:
+#                boot=DEBUG:
+spring:
+    profiles:
+        active: dev
+    jpa:
+        generate-ddl: false
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+    mail:
+        default-encoding: UTF-8
+        properties:
+            mail:
+                mime:
+                    charset: UTF
+                smtp:
+                    writetimeout: 10000
+                    connectiontimeout: 10000
+                    timeout: 10000
+                    auth: true
+                    starttls:
+                        enable: true
+                        required: true
+
+app:
+    jwt:
+        secretKey: B1PtOxdWYsCuZ7fon6wMuUWwsGtLouYyUl4LVScBNiKSKWIHt+fSWKq9sxEPc8ts+8ey1o/qdy5oMs1qYgq0hQ==
+
+springdoc:
+    swagger-ui:
+        filter: true
+
+logging:
+    level:
+        org:
+            springframework:
+                boot: DEBUG
+            hibernate:
+                SQL: DEBUG
+                type: TRACE
+
+---
+spring:
+    config:
+        activate:
+            on-profile: dev
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/glasses-store?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+        username: root
+        password:
+    mail:
+        host: smtp.gmail.com
+        username: buituan2002.tt@gmail.com
+        password: aezk fnoa fxao inuy
+        port: 587
+
+server:
+    port: 8081
+
+app:
+    allowed:
+        origins: http://localhost:3000,http://localhost:3001
+
+---
+spring:
+    config:
+        activate:
+            on-profile: prod
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/glasses-store?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+        username: root
+        password: Tuan0209.
+    mail:
+        host: smtp.gmail.com
+        username: buituan2002.tt@gmail.com
+        password: jmzg detw xssv ybf
+        port: 587
+
+server:
+    port: 8081
+
+app:
+    allowed:
+        origins:
